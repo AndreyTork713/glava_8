@@ -1,3 +1,20 @@
-def  get_login_name ( first , last , idnumber ):
+# функция получает от пользователя данные
+# и возвращает имя для входа в систему
 
-    set1  =  first [ 0 : 3 ]
+def get_login_name(first, last, idnumber):
+
+    # берем первые три буквы имени
+    set1 = first[0:3]
+
+    # берем первые три буквы фамилии
+    set2 = last[0:3]
+
+    # берем последние три цифры ID
+    set3 = idnumber[-3:]
+
+    # собираем воедино набор символов
+    login_name = set1 + set2 + set3
+
+    # возвращаем
+    return login_name
+
